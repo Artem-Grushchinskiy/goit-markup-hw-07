@@ -75,12 +75,15 @@ body {
 
 /* ---------------- header -------------------------------------- */
 .header {
+  width: 100%;
   border-bottom: 1px solid var(--footer-text);
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-nav > .header-list {
   display: none;
@@ -232,10 +235,17 @@ address {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-.nav-link {
+.nav-link-menu {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--footer-nav-color);
 }
-.active {
-}
+
 .menu-contacts {
   list-style: none;
   text-decoration: none;
@@ -250,6 +260,9 @@ address {
   list-style: none;
   text-decoration: none;
   width: 100%;
+}
+.menu-contacts:first-child {
+  color: var(--accent-button);
 }
 .menu-contacts-link {
   text-decoration: none;
@@ -534,7 +547,7 @@ address {
 /* -------------------------- Hero ------------------------------------ */
 
 .hero {
-  width: 428px;
+  min-width: 428px;
   height: 432px;
   margin-left: auto;
   margin-right: auto;
@@ -628,6 +641,7 @@ address {
 /* ------------ services ----------- */
 
 .services {
+  display: none;
   padding-bottom: 120px;
 }
 .title {
@@ -729,6 +743,7 @@ address {
   padding-bottom: 96px;
 }
 .customers-list {
+  max-width: 396px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 72px;
@@ -776,8 +791,8 @@ address {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.32, 0, 0.67, 0);
-  width: 408px;
-  height: 584px;
+  width: 392px;
+  height: 586px;
   background-color: var(--modal-background);
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
@@ -830,7 +845,7 @@ address {
 .modal-label {
   display: block;
 }
-.modal-lable,
+.modal-label,
 .modal-comment {
   font-size: 12px;
   line-height: 1.17;
@@ -939,6 +954,7 @@ address {
   border-radius: 4px;
   display: block;
   margin: 0 auto;
+  margin-top: 24px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   text-align: center;
   /* margin-bottom: 24px; */
@@ -995,14 +1011,46 @@ address {
   .container {
     max-width: 768px;
   }
+  .header-container {
+    flex-direction: row;
+    padding: 0 16px;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   .header-nav > .header-list {
     display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+  .logo {
+    margin-right: 0;
+  }
+  .header-list {
+    margin-left: 120px;
+  }
   address {
     display: block;
+  }
+  .contacts {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .contacts-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+  .contacts-mail {
+    margin-right: 0;
+  }
+  .header-menu,
+  .menu-container,
+  .mobile-menu {
+    display: none;
   }
   /* hero */
   .hero {
@@ -1077,6 +1125,10 @@ address {
   .team-item {
     margin: 0;
   }
+  .modal {
+    width: 408px;
+    height: 586px;
+  }
   /* footer */
   .footer {
     padding-top: 96px;
@@ -1120,6 +1172,39 @@ address {
   .container {
     max-width: 1160px;
   }
+  .header-container {
+    flex-direction: row;
+    padding: 0 16px;
+  }
+
+  .header-nav > .header-list {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    margin-left: 156px;
+  }
+  .header-list {
+    margin-left: 76px;
+  }
+  address {
+    display: block;
+  }
+  .contacts {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 156px;
+  }
+  .contacts-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+  .contacts-mail {
+    margin-right: 40px;
+  }
   .header-nav {
     display: block;
     display: flex;
@@ -1131,8 +1216,7 @@ address {
   }
   /* hero */
   .hero {
-    width: 1440px;
-    height: 600px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
@@ -1212,6 +1296,7 @@ address {
     padding-bottom: 120px;
   }
   .customers-list {
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
   .cust-beauty {
@@ -1245,5 +1330,9 @@ address {
   }
   .footer-text {
     font-size: 16px;
+  }
+  .modal {
+    width: 408px;
+    height: 584px;
   }
 }
