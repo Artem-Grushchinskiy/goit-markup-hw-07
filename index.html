@@ -63,14 +63,14 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="mobile-menu">
+        <button type="button" class="mobile-menu" data-menu-open>
           <svg class="mobile-menu-icon" width="47" height="32">
             <use href="./img/symbol-defs.svg#icon-menu-open-mobile-icon"></use>
           </svg>
         </button>
       </div>
-      <div class="header-menu menu-container">
-        <button type="button" class="header-menu-close" data-modal-close>
+      <div class="header-menu menu-container" data-menu>
+        <button type="button" class="header-menu-close" data-menu-close>
           <svg class="icon-close" width="8" height="8">
             <use href="./img/sym-defs-modal.svg#icon-close_passive"></use>
           </svg>
@@ -634,5 +634,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
