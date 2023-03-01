@@ -59,7 +59,7 @@ body {
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 .section {
   padding-top: 120px;
